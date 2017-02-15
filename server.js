@@ -9,7 +9,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Profile', function (req, res) {
+
+
+app.get('/1', function (req, res) {
     res.sendfile(path.join(__dirname, 'ui', 'My Profile.html'));
 });
 
