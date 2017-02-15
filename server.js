@@ -11,17 +11,22 @@ app.get('/', function (req, res) {
 
 
 
+
 app.get('/1', function (req, res) {
-    res.sendfile(path.join(__dirname, 'ui', 'My Profile.html'));
+  res.sendfile(path.join(__dirname, 'ui', 'My Profile.html'));
 });
 
 app.get('/2', function (req, res) {
-  res.send('2 will be served here'); 
+  res.sendfile(path.join(__dirname, 'ui', 'qualifications.html')); 
 });
 
 app.get('/3', function (req, res) {
-  res.send('3 will be served here'); 
+ res.sendfile(path.join(__dirname, 'ui', 'life goals.html')); 
 });
+
+
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
