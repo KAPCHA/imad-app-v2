@@ -6,10 +6,10 @@ var app = express();
 app.use(morgan('combined'));
 
 var pages ={
-PROFILE:{
+'PROFILE':{
     title:'PROFILE | KAPIL',
     heading:'My Profile',
-    date:'21/feb/2017',
+    date:'19/feb/2017',
     content:      
             `<p>
             Hello! Everyone here i am the developer of this web page 
@@ -20,16 +20,16 @@ PROFILE:{
             Thnx for visiting my profile page.
             </p>`
 },
-QUALIFICATION:{
+'QUALIFICATION':{
     title:'QUALIFICATION | KAPIL',
     heading:'My Qualification',
-    date:'21/feb/2017',
+    date:'20/feb/2017',
     content:      
             ` <p>I have completed my Graduation (Bachelor of Technology) in ECE.
             from DCRUST, Murthal (Haryana)
             </p>`
 },
-LIFEGOALS:{
+'LIFE-GOALS':{
     title:'LIFE GOALS | KAPIL',
     heading:'Life Goals',
     date:'21/feb/2017',
@@ -86,20 +86,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/1', function (req, res) {
-  res.send(createTemplate(PROFILE));
+app.get(':/page', function (req, res) {
+  var page = req.params.page;
+  res.send(createTemplate(pages[page]));
 });
-
-app.get('/2', function (req, res) {
-  res.send(createTemplate(QUALIFICATION)); 
-});
-
-app.get('/3', function (req, res) {
- res.send(createTemplate(LIFEGOALS)); 
-});
-
-
-
 
 
 app.get('/ui/style.css', function (req, res) {
