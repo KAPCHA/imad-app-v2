@@ -90,11 +90,11 @@ app.get('/1', function (req, res) {
 });
 
 app.get('/2', function (req, res) {
-  res.sendfile(path.join(__dirname, 'ui', 'qualification.html')); 
+  res.send(createTemplate(QUALIFICATIONS)); 
 });
 
 app.get('/3', function (req, res) {
- res.sendfile(path.join(__dirname, 'ui', 'life goals.html')); 
+ res.send(createTemplate(LIFEGOALS)); 
 });
 
 
