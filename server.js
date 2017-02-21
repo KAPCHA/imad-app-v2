@@ -5,18 +5,39 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var PROFILE={
+var PAGES = {
+PROFILE:{
     title:'PROFILE | KAPIL',
     heading:'My Profile',
     date:'21/feb/2017',
-    content:        `<p>
-                        Hello! Everyone here i am the developer of this web page 
-                        name KAPIL CHAUDHARY
-                        i am one of the enthusiastic student here.
-                    </p>    
-                    <p>
-                        Thnx for visiting my profile page.
-                    </p>`
+    content:      
+            `<p>
+            Hello! Everyone here i am the developer of this web page 
+            name KAPIL CHAUDHARY
+            i am one of the enthusiastic student here.
+            </p>    
+            <p>
+            Thnx for visiting my profile page.
+            </p>`
+},
+QUALIFICATION:{
+    title:'QUALIFICATION | KAPIL',
+    heading:'My Qualification',
+    date:'21/feb/2017',
+    content:      
+            ` <p>I have completed my Graduation (Bachelor of Technology) in ECE.
+            from DCRUST, Murthal (Haryana)
+            </p>`
+},
+LIFEGOALS:{
+    title:'LIFE GOALS | KAPIL',
+    heading:'Life Goals',
+    date:'21/feb/2017',
+    content:   
+            `<p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
+                that one always have dream of.
+            </p>`
+},
 };
 
 function createTemplate (data){
