@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var PAGES = {
-PROFILE:{
+
+var PROFILE={
     title:'PROFILE | KAPIL',
     heading:'My Profile',
     date:'21/feb/2017',
@@ -19,8 +19,8 @@ PROFILE:{
             <p>
             Thnx for visiting my profile page.
             </p>`
-},
-QUALIFICATION:{
+};
+var QUALIFICATION={
     title:'QUALIFICATION | KAPIL',
     heading:'My Qualification',
     date:'21/feb/2017',
@@ -28,8 +28,8 @@ QUALIFICATION:{
             ` <p>I have completed my Graduation (Bachelor of Technology) in ECE.
             from DCRUST, Murthal (Haryana)
             </p>`
-},
-LIFEGOALS:{
+};
+var LIFEGOALS={
     title:'LIFE GOALS | KAPIL',
     heading:'Life Goals',
     date:'21/feb/2017',
@@ -37,8 +37,8 @@ LIFEGOALS:{
             `<p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
                 that one always have dream of.
             </p>`
-},
 };
+
 
 function createTemplate (data){
     var title = data.title;
