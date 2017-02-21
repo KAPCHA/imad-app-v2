@@ -6,9 +6,9 @@ var app = express();
 app.use(morgan('combined'));
 
 var PROFILE={
-    title:'Profile | KAPIL',
-    heading:'MY PROFILE',
-    date:'15-feb-2017',
+    title:'PROFILE | KAPIL',
+    heading:'MY Profile',
+    date:'21/feb/2017',
     content:        `<p>
                         Hello! Everyone here i am the developer of this web page 
                         name KAPIL CHAUDHARY
@@ -25,7 +25,9 @@ function createTemplate (data){
     var heading = data.heading;
     var content = data.content;
     
-var htmlTemplate=`
+    
+    //template for all html pages//
+var Template=`
     <html>
     <head>
         <title>     ${title}
@@ -54,7 +56,7 @@ var htmlTemplate=`
      </body>
     </html>
     `;
-    return htmlTemplate;
+    return Template;
 }
 
 
