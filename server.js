@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var PROFILE={
     title:'PROFILE | KAPIL',
-    heading:'MY Profile',
+    heading:'My Profile',
     date:'21/feb/2017',
     content:        `<p>
                         Hello! Everyone here i am the developer of this web page 
@@ -27,7 +27,7 @@ function createTemplate (data){
     
     
     //template for all html pages//
-var Template=`
+var htmlTemplate=`
     <html>
     <head>
         <title>     ${title}
@@ -56,7 +56,7 @@ var Template=`
      </body>
     </html>
     `;
-    return Template;
+    return htmlTemplate;
 }
 
 
