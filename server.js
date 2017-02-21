@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var pages ={
-'PROFILE':{
+'1':{
     title:'PROFILE | KAPIL',
     heading:'My Profile',
     date:'19/feb/2017',
@@ -20,7 +20,7 @@ var pages ={
             Thnx for visiting my profile page.
             </p>`
 },
-'QUALIFICATION':{
+'2':{
     title:'QUALIFICATION | KAPIL',
     heading:'My Qualification',
     date:'20/feb/2017',
@@ -29,7 +29,7 @@ var pages ={
             from DCRUST, Murthal (Haryana)
             </p>`
 },
-'LIFE-GOALS':{
+'3':{
     title:'LIFE GOALS | KAPIL',
     heading:'Life Goals',
     date:'21/feb/2017',
