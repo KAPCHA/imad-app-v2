@@ -63,7 +63,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/1', function (req, res) {
-  res.send(createtemplate(PROFILE));
+  res.send(createTemplate(PROFILE));
 });
 
 app.get('/2', function (req, res) {
