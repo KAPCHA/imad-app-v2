@@ -90,7 +90,7 @@ app.get('/1', function (req, res) {
 });
 
 app.get('/2', function (req, res) {
-  res.send(createTemplate(QUALIFICATIONS)); 
+  res.send(createTemplate(QUALIFICATION)); 
 });
 
 app.get('/3', function (req, res) {
