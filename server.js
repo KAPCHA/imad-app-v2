@@ -37,7 +37,7 @@ var pages ={
             `<p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
                 that one always have dream of.
             </p>`
-}
+},
 };
 
 
@@ -86,7 +86,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:page', function (req, res) {
+app.get('/page', function (req, res) {
   var page = req.params.page;
   res.send(createTemplate(pages[page]));
 });
