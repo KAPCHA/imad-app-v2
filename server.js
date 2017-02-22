@@ -14,7 +14,7 @@ var pages ={
             `<p>
             Hello! Everyone here i am the developer of this web page 
             name KAPIL CHAUDHARY
-            i am one of the enthusiastic student here.
+            i am one of the enthusiastic student.
             </p>    
             <p>
             Thnx for visiting my profile page.
@@ -35,7 +35,7 @@ var pages ={
     date:'21/feb/2017',
     content:   
             `<p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
-                that one always have dream of.
+                That everyone always have dream of.
             </p>`
 },
 };
