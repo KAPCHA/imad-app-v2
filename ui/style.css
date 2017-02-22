@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: grey;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .center {
@@ -10,11 +10,11 @@ body {
 
 .text-big {
     font-size: 320%;
+    color: silver;
 }
 
 .bold {
     font-weight: bold;
-    color: white;
 }
 
 .img-medium {
@@ -26,7 +26,6 @@ body {
     margin: 0 auto;
     color: #0c0a75;
     font-family: sans-serif;
-    padding-top: 30px;
     padding-left: 15px;
     padding-right: 15px;
 }
