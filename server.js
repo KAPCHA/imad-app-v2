@@ -37,7 +37,7 @@ var pages ={
             `<p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
                 that one always have dream of.
             </p>`
-}
+},
 };
 
 
