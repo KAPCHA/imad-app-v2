@@ -28,8 +28,12 @@ var pages ={
     heading:'My Qualification',
     date:'20/feb/2017',
     content:      
-            ` <p>I have completed my Graduation (Bachelor of Technology) in ECE.
-            from DCRUST, Murthal (Haryana)
+            ` <p>
+            <script>
+            alert('hi');
+            </script>
+                    I have completed my Graduation (Bachelor of Technology) in ECE.
+                    from DCRUST, Murthal (Haryana)
             </p>`
 },
 '3':{
