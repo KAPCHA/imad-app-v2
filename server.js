@@ -10,12 +10,13 @@ var pages ={
     title:'PROFILE | KAPIL',
     heading:'My Profile',
     date:'19/feb/2017',
-    content:      
-            `<p>
+    content:`
+            <p id="1">
             Hello! Everyone here i am the developer of this web page 
             name KAPIL CHAUDHARY
             i am one of the enthusiastic student.
-            </p>    
+            </p> 
+            
             <p>
             Thnx for visiting my profile page.
             </p>`
