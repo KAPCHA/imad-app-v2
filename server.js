@@ -11,11 +11,13 @@ var pages ={
     heading:'My Profile',
     date:'19/feb/2017',
     content:`
-            <p id="1">
+            <div id="2">
+            <p>
             Hello! Everyone here i am the developer of this web page 
             name KAPIL CHAUDHARY
             i am one of the enthusiastic student.
             </p> 
+            </div>
             
             <p>
             Thnx for visiting my profile page.
@@ -61,7 +63,7 @@ var htmlTemplate=`
         
     </head>
     <body>
-        <div class="container">
+        <div id="2" class="container">
             <div>
                     <a href="/">Home Page</a>
                     <hr/>
