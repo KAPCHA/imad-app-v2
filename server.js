@@ -67,7 +67,7 @@ var htmlTemplate=`
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div id="2" class="container">
+        <div class="container" id="2">
             <div>
                     <a href="/">Home Page</a>
                     <hr/>
