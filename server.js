@@ -64,7 +64,7 @@ var htmlTemplate=`
         <title>     ${title}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <div id="2" class="container">
