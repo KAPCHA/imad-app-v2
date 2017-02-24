@@ -32,9 +32,6 @@ var pages ={
             alert ('click OK to ENTER')
             </script>
             <p>
-            <script>
-            alert('hi');
-            </script>
                     I have completed my Graduation (Bachelor of Technology) in ECE.
                     from DCRUST, Murthal (Haryana)
             </p>`
