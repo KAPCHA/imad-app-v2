@@ -1,7 +1,41 @@
 body {
     font-family: sans-serif;
-    background-color: black;
-    margin-top: 50px;
+    margin-top: 60px;
+}
+
+.mark-suit {
+background: url("mark-suit.png");
+background-repeat: no-repeat;
+}
+
+.back {
+background: url("back.png");
+background-repeat: no-repeat;
+}
+
+.page2 {
+background: url("page2.png");
+background-repeat: no-repeat;
+}
+
+.page1 {
+background: url("page1.png");
+background-repeat: no-repeat;
+}
+
+.life {
+background: url("life.png");
+background-repeat: no-repeat;
+}
+
+.wow {
+background: url("wow.png");
+background-repeat: no-repeat;
+}
+
+.kapil {
+background: url("kapil.png");
+background-repeat: no-repeat;
 }
 
 .center {
@@ -10,7 +44,7 @@ body {
 
 .text-big {
     font-size: 320%;
-    color: silver;
+    color:white;
 }
 
 .bold {
@@ -24,8 +58,10 @@ body {
 .container {
     max-width: 1024px;
     margin: 0 auto;
-    color: lightgrey;
-    font-family: sans-serif;
+    color: black;
+    font-family: cursive;
     padding-left: 15px;
     padding-right: 15px;
+    font-size:86%;
 }
+
