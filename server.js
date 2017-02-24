@@ -10,7 +10,8 @@ var pages ={
     title:'PROFILE | KAPIL',
     heading:'My Profile',
     date:'19/feb/2017',
-    content:`<script>
+    content:`
+            <script>
             alert ('click OK to ENTER')
             </script>
             <p>
@@ -62,7 +63,7 @@ function createTemplate (data){
     
     //template for all html pages//
 var htmlTemplate=`
-    <html>
+    <html class="life">
     <head>
         <title>     ${title}
         </title>
@@ -70,7 +71,7 @@ var htmlTemplate=`
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div class="container" id="2">
+        <div class="container">
             <div>
                     <a href="/">Home Page</a>
                     <hr/>
@@ -113,6 +114,36 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/ui/url.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'url.png'));
+});
+
+                          // custom bg files //
+                          
+app.get('/ui/life.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'life.png'));
+});
+
+app.get('/ui/wow.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'wow.png'));
+});
+
+app.get('/ui/mark-suit.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'mark-suit.png'));
+});
+
+app.get('/ui/kapil.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'kapil.png'));
+});
+
+app.get('/ui/back.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'back.png'));
+});
+
+app.get('/ui/page2.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'page2.png'));
+});
+
+app.get('/ui/page1.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'page1.png'));
 });
 
 
