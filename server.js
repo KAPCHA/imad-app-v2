@@ -136,8 +136,8 @@ app.get('/ui/kapil.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'kapil.png'));
 });
 
-app.get('/back.png', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'back.png'));
+app.get('/ui/back.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'back.png'));
 });
 
 app.get('/ui/page2.png', function (req, res) {
