@@ -10,7 +10,9 @@ var pages ={
     title:'PROFILE | KAPIL',
     heading:'My Profile',
     date:'19/feb/2017',
-    content:`
+    content:`<script>
+            alert ('click OK to ENTER')
+            </script>
             <p>
             Hello! Everyone here i am the developer of this web page 
             name KAPIL CHAUDHARY
@@ -25,8 +27,11 @@ var pages ={
     title:'QUALIFICATION | KAPIL',
     heading:'My Qualification',
     date:'20/feb/2017',
-    content:      
-            ` <p>
+    content:`
+            <script>
+            alert ('click OK to ENTER')
+            </script>
+            <p>
             <script>
             alert('hi');
             </script>
@@ -38,8 +43,11 @@ var pages ={
     title:'LIFE GOALS | KAPIL',
     heading:'Life Goals',
     date:'21/feb/2017',
-    content:   
-            `<p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
+    content:`
+            <script>
+            alert ('click OK to ENTER')
+            </script>
+            <p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
             </p>
              <p>
                 That everyone always have dream of.
