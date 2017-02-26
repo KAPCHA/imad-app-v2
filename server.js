@@ -120,7 +120,7 @@ app.get('/ui/url.png', function (req, res) {
 
                           // custom bg files //
                           
-app.get('/ui/life.png', function (req, res) {
+app.get('/ui/life.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'life.jpg'));
 });
 
