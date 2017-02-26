@@ -51,6 +51,11 @@ background-repeat: no-repeat;
     font-weight: bold;
 }
 
+.img-new {
+    height: 150px;
+    padding-left:650px;
+    margin-top:140px;
+}
 .img-medium {
     height: 150px;
 }
