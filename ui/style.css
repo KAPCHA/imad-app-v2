@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .mark-suit {
@@ -9,7 +9,7 @@ background-repeat: no-repeat;
 }
 
 .back {
-background: url('back.png');
+background: url('/ui/back.gif');
 background-repeat: no-repeat;
 }
 
