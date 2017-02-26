@@ -91,6 +91,7 @@ var htmlTemplate=`
          <script type="text/javascript" src="/ui/main.js">
         </script>
      </body>
+     <img src="/ui/hulk.png" class="img-new" />
     </html>
     `;
     return htmlTemplate;
