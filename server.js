@@ -121,7 +121,7 @@ app.get('/ui/url.png', function (req, res) {
                           // custom bg files //
                           
 app.get('/ui/life.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'life.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'life.jpg'));
 });
 
 app.get('/ui/wow.png', function (req, res) {
