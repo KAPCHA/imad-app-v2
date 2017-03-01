@@ -32,6 +32,6 @@ button.onclick = function () {
 
 
 		//make the request
-	httprequest.open('GET', 'localhost:8080/counter', true);
+	httprequest.open('GET', 'http://imad.hasura-app.io/counter', true);
 	httprequest.send(null);
 };
