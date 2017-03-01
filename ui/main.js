@@ -9,3 +9,29 @@ function moveRight (){
 img.onclick = function (){
   var interval = setInterval (moveRight, 5);
 };
+
+       // counter code //
+var button = document.getElementById('counter');
+button.onclick = function () {
+	//create a request object
+	var request = new XMLHttpRequest();
+
+	//capture the response and store it in a variable
+	request.onreadystatechange = function() {
+		if (request.readystate === XMLHttpRequest.DONE) {
+			//take some action
+			if(request.status === 200) {
+				var counter = request.responseText; 
+				var span = document.getElementById('count');
+				span.innerHTML = counter.toString();
+			}
+		}
+
+
+	};
+
+
+		//make the request
+	httprequest.open('GET', 'localhost:8080/counter', true);
+	httprequest.send(null);
+};
