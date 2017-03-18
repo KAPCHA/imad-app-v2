@@ -34,7 +34,7 @@ button.onclick = function () {
 
 
 //make the request
-	request.open('GET', 'http://localhost:8080/counter', true);
+	request.open('GET', 'http://kapcha.imad.hasura-app.io/counter', true);
 	request.send(null);
 };
 
@@ -70,7 +70,7 @@ ul.innerHTML = list;
 //make the request
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
-request.open('GET', 'http://localhost:8080/submit-name?name='+name, true);
+request.open('GET', 'http://kapcha.imad.hasura-app.io/submit-name?name='+name, true);
 request.send(null);
 	
 	//capture a list of names and render it as a list//
