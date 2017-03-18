@@ -3,13 +3,18 @@ body {
     margin-top: 50px;
 }
 
+.like {
+background: url(like.jpg);
+background-repeat: no-repeat;
+}
+
 .mark-suit {
-background: url("mark-suit.png");
+background: url("/images/mark-suit.png");
 background-repeat: no-repeat;
 }
 
 .back {
-background: url('/ui/back.gif');
+background: url(/images/back.gif);
 background-repeat: no-repeat;
 }
 
@@ -24,7 +29,7 @@ background-repeat: no-repeat;
 }
 
 .life {
-background: url(/ui/life.jpg);
+background: url("/images/life.jpg");
 background-repeat: no-repeat;
 }
 
@@ -53,9 +58,10 @@ background-repeat: no-repeat;
 
 .img-new {
     height: 150px;
-    padding-left: 650px;
-    margin-top: 140px;
+    padding-left:650px;
+    margin-top:140px;
 }
+
 .img-medium {
     height: 150px;
 }
@@ -72,3 +78,4 @@ background-repeat: no-repeat;
 .footer {
     color:#5555d6;
 }
+
