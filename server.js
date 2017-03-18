@@ -4,77 +4,27 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var config = {
-	user: 'kapcha',
-	database: 'kapcha',
-	host: 'db.imad.hasura-app.io',
+	user: 'postgres',
+	database: 'postgres',
+	host: 'localhost',
 	port: '5432',
-	password: process.env.DB_PASSWORD
+	password: 'kapil20kapil',
 };
 
 var app = express();
 app.use(morgan('combined'));
 
-var pages ={
-'1':{
-    title:'PROFILE | KAPIL',
-    heading:'My Profile',
-    date:'19/feb/2017',
-    content:`
-            <script>
-            alert ('click OK to ENTER')
-            </script>
-            <p>
-            Hello! Everyone here i am the developer of this web page 
-            name KAPIL CHAUDHARY
-            i am one of the enthusiastic student.
-            </p>
-            
-            <p>
-            Thnx for visiting my profile page.
-            </p>`
-},
-'2':{
-    title:'QUALIFICATION | KAPIL',
-    heading:'My Qualification',
-    date:'20/feb/2017',
-    content:`
-            <script>
-            alert ('click OK to ENTER')
-            </script>
-            <p>
-                    I have completed my Graduation (Bachelor of Technology) in ECE.
-                    from DCRUST, Murthal (Haryana)
-            </p>`
-},
-'3':{
-    title:'LIFE GOALS | KAPIL',
-    heading:'Life Goals',
-    date:'21/feb/2017',
-    content:`
-            <script>
-            alert ('click OK to ENTER')
-            </script>
-            <p>Though everyone have their own life plans and goals but am very specific to be a respectful human and a good citizen for my surroundings and live a happy and prosper life.
-            </p>
-             <p>
-                That everyone always have dream of.
-            </p>`
-},
-};
-
-
 function createTemplate (data){
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var content = data.content;
-    
-    
-    //template for all html pages//
-var htmlTemplate=`
-    <html class="life">
+var title = data.title;
+var date = data.date;
+var heading = data.heading;
+var content = data.content;
+
+var htmlTemplate = `
+<html class="life">
     <head>
-        <title>     ${title}
+        <title>
+		${title}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -86,32 +36,34 @@ var htmlTemplate=`
                     <hr/>
             </div>
             <h2>
-                    ${heading}
+                 ${heading}
             </h2>
             <div>
                 <h4>
-                    ${date}
+                 ${date.toDateString()}
                 </h4>
             </div>
             <div>
-                    ${content}
+                 ${content}
             </div>
          </div>
          <script type="text/javascript" src="/ui/main.js">
         </script>
+	<img src="/images/hulk.png" class="img-new" />
      </body>
-     <img src="/ui/hulk.png" class="img-new" />
-    </html>
-    `;
-    return htmlTemplate;
+ </html>
+
+
+`;
+	    return htmlTemplate;
 }
+		
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
-var counter = 0;
-app.get('/counter', function (req, res) {
-	counter = counter + 1;
-	res.send(counter.toString());
-})
-
+		// pageName == page1 //
+		// pages[pageName] == {} content object for page1 //
 var pool = new Pool(config);
 app.get('/test-db', function (req, res){
 	//make a select request
@@ -120,43 +72,66 @@ app.get('/test-db', function (req, res){
 	if(err) {
 		res.status(500).send(err.toString());
 	}
-       	else {
+        else{
 		res.send(JSON.stringify(result.rows));
-	}
+	  }
 	});
 });
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+var counter = 0;
+app.get('/counter', function (req, res) {
+	counter = counter + 1;
+	res.send(counter.toString());
 });
 
-app.get('/:page', function (req, res) {
-  var page = req.params.page;
-  res.send(createTemplate(pages[page]));
+var names = [];
+app.get('/submit-name', function (req, res) {
+		//get the name from request//
+var name = req.query.name;
+names.push(name);
+res.send(JSON.stringify(names));
 });
 
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
 
+app.get('/pages/:pageName', function (req, res) {
+	//articleName== page1
+	//pages[pageName] == {} content object for page1
+	
+	//SELECT * FROM pages WHERE title = '\';DELETE WHERE a = \'asdf'       ===injection(hacking)
+	//use $1 arguments
+  pool.query("SELECT * FROM pages WHERE title = $1", [req.params.pageName], function(err, result){
+	  if(err) {
+	  res.status(500).send(err.toString());
+	  } else {
+	  	if(result.rows.length === 0) {
+			res.status(404).send('Page not found');
+		} else {
+			var articleData = result.rows[0];
+			res.send(createTemplate(articleData));
+		}
+	  }
+  });
+
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/url.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'url.png'));
+app.get('/ui/main.js', function (req, res){
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-                          // custom bg files //
-                          
-app.get('/ui/life.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'life.jpg'));
+app.get('/images/hulk.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images', 'hulk.png'));
 });
 
-app.get('/ui/hulk.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'hulk.png'));
+app.get('/images/life.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images', 'life.jpg'));
 });
 
+app.get('/ui/wow.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'wow.png'));
+});
 app.get('/ui/mark-suit.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'mark-suit.png'));
 });
@@ -165,8 +140,8 @@ app.get('/ui/kapil.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'kapil.png'));
 });
 
-app.get('/ui/back.gif', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'back.gif'));
+app.get('/images/back.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images', 'back.gif'));
 });
 
 app.get('/ui/page2.png', function (req, res) {
@@ -177,8 +152,12 @@ app.get('/ui/page1.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'page1.png'));
 });
 
+app.get('/images/url.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images', 'url.png'));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
+  console.log(`WOW! IMAD course app listening on port ${port}!`);
 });
+
