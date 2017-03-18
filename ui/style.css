@@ -3,33 +3,18 @@ body {
     margin-top: 50px;
 }
 
-.like {
-background: url(like.jpg);
-background-repeat: no-repeat;
-}
-
 .mark-suit {
-background: url("/images/mark-suit.png");
+background: url("/ui/hulk.png");
 background-repeat: no-repeat;
 }
 
 .back {
-background: url(/images/back.gif);
-background-repeat: no-repeat;
-}
-
-.page2 {
-background: url("page2.png");
-background-repeat: no-repeat;
-}
-
-.page1 {
-background: url("page1.png");
+background: url(/ui/back.gif);
 background-repeat: no-repeat;
 }
 
 .life {
-background: url("/images/life.jpg");
+background: url("/ui/life.jpg");
 background-repeat: no-repeat;
 }
 
@@ -39,7 +24,7 @@ background-repeat: no-repeat;
 }
 
 .kapil {
-background: url("kapil.png");
+background: url("/ui/url.png");
 background-repeat: no-repeat;
 }
 
