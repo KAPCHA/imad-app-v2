@@ -49,7 +49,7 @@ var htmlTemplate = `
          </div>
          <script type="text/javascript" src="/ui/main.js">
         </script>
-	<img src="/images/hulk.png" class="img-new" />
+	<img src="/ui/hulk.png" class="img-new" />
      </body>
  </html>
 
