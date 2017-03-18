@@ -121,39 +121,20 @@ app.get('/ui/main.js', function (req, res){
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/images/hulk.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/images', 'hulk.png'));
+app.get('/ui/hulk.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'hulk.png'));
 });
 
-app.get('/images/life.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/images', 'life.jpg'));
+app.get('/ui/life.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'life.jpg'));
 });
 
-app.get('/ui/wow.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'wow.png'));
-});
-app.get('/ui/mark-suit.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'mark-suit.png'));
+app.get('/ui/url.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'url.png'));
 });
 
-app.get('/ui/kapil.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'kapil.png'));
-});
-
-app.get('/images/back.gif', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/images', 'back.gif'));
-});
-
-app.get('/ui/page2.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'page2.png'));
-});
-
-app.get('/ui/page1.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'page1.png'));
-});
-
-app.get('/images/url.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/images', 'url.png'));
+app.get('/ui/back.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'back.gif'));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
