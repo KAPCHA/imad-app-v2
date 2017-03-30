@@ -82,7 +82,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = '/images/iron.jpg';
+img.src = '/ui/iron.jpg';
 var CanvasXSize = 2000 ;
 var CanvasYSize = 300;
 var speed = 2; //lower is faster
