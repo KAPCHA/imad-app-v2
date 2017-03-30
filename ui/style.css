@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 .mark-suit {
@@ -51,8 +51,8 @@ background-repeat: no-repeat;
     max-width: 2000px;
 }
 
-.img-clock{
-
+.img-clock {
+    margin-bottom:-190px;
 }
 
 .container {
