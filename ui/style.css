@@ -46,6 +46,11 @@ background-repeat: no-repeat;
     height: 150px;
 }
 
+.img-move {
+    height:200px;
+    max-width: 2000px;
+}
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
