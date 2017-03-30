@@ -134,7 +134,7 @@ function draw() {
     ctx.drawImage(img, x, y,imgW, imgH);
     //amount to move
     x += dx;
-};
+}
 
 function clock() {
   var now = new Date();
